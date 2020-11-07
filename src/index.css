@@ -1,13 +1,20 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts/fonts.css);
+@import url(./blocks/page-wrapper/page-wrapper.css);
+@import url(./blocks/page/page.css);
+@import url(./blocks/content/content.css);
+@import url(./blocks/header/header.css);
+@import url(./blocks/profile/profile.css);
+@import url(./blocks/places/places.css);
+/*по аналогии с модификатором для попапа - подключаем модификатор активного состояния попапа позже подключения основной css*/
+@import url(./blocks/places/__like-btn/_state/places__like-btn_state_active.css);
+@import url(./blocks/footer/footer.css);
+@import url(./blocks/popup/popup.css);
+/*т.к. импорты необходимо объявлять в начале файла блока - модификатор не сможет переопределить значение св-ва display.
+  В данном случае нашёл один из выходов - подключить модификатор позже чем css блока*/
+@import url(./blocks/popup/_state/popup_state_opened.css);
+@import url(./blocks/input/input.css);
+@import url(./blocks/input/__field-error/_state/input__field-error_state_active.css);
+@import url(./blocks/input/__btn/_state/input__btn_state_disabled.css);
+@import url(./blocks/input/__btn/_type/input__btn_type_alone.css);
+@import url(./blocks/input/__text/_type/input__text_type_error.css);
