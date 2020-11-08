@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import apiInsance from '../utils/Api.js';
 import Card from './Card.js';
 

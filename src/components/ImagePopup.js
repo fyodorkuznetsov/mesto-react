@@ -3,7 +3,7 @@ import React from 'react';
 function ImagePopup(props) {
 
   return (
-    <section className={`popup popup_type_picture ${typeof props.card.name !== 'undefined' ? ' popup_state_opened' : ''}`}>
+    <section className={`popup popup_type_picture ${props.isOpened ? ' popup_state_opened' : ''}`}>
       <div className="popup__picture-container">
         <img src={props.card.link} className="popup__picture" alt={props.card.name} />
         <p className="popup__picture-title">{props.card.name}</p>
