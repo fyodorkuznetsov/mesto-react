@@ -12,7 +12,7 @@ function PopupWithForm(props) {
     <section className={popupClass}>
       <div className="popup__container">
         <h3 className="popup__title">{props.title}</h3>
-        <form className={`input input_type_${props.name}`} action="#" name={props.name} encType="multipart/form-data" method="POST" noValidate>
+        <form className={`input input_type_${props.name}`} onSubmit={props.onSubmit} action="#" name={props.name} encType="multipart/form-data" method="POST" noValidate>
           {props.children}
           <button type="submit" className={buttonClass} disabled={props.buttonDisabled}>{props.buttonText}</button>
         </form>

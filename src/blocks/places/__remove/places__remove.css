@@ -11,6 +11,10 @@
   transition: opacity 0.3s ease-in-out;
 }
 
+.places__remove_hidden{
+  display: none;
+}
+
 .places__remove:hover{
   opacity: 0.6;
 }
