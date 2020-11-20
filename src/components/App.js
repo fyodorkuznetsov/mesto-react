@@ -17,7 +17,7 @@ function App() {
   const [isAddPlacePopupOpen, setAddPlaceClick] = React.useState(false);
   const [isEditAvatarPopupOpen, setEditAvatarClick] = React.useState(false);
 
-  const [selectedCard, setSelectedCard] = React.useState([]);
+  const [selectedCard, setSelectedCard] = React.useState({});
   const [isPicturePopupOpen, setPicturePopupOpened] = React.useState(false);
 
   const [currentUser, setCurrentUser] = React.useState({ name: 'Chuck Testa', avatar: 'https://i.ytimg.com/vi/LJP1DphOWPs/hqdefault.jpg', about: 'American Taxidermist' });
@@ -66,7 +66,7 @@ function App() {
     setAddPlaceClick(false);
     setEditAvatarClick(false);
     setPicturePopupOpened(false);
-    setSelectedCard([]);
+    setSelectedCard({});
   }
 
   function handlePictureClick(card) {
